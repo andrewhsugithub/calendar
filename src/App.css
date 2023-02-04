@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
+body {
+  font-family: sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.week-days {
+  display: flex;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.background-container {
+  background-image: linear-gradient(#fdb298, #b176fe);
+  width: 100%;
+  height: 500px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.calendar-container {
+  width: 55%;
+  margin: auto;
+  position: relative;
+  top: -500px;
+  padding-top: 200px;
+}
+
+.datepicker-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.datepicker-container span {
+  font-size: 20px;
+}
+
+.datepicker-container svg {
+  border-radius: 100px;
+  background: #e8e8e8;
+  padding: 10px 10px;
+  margin: 10px;
+}
+
+.calendar {
+  margin: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.weekdays-container {
+  display: flex;
+  margin: auto;
+  justify-content: space-around;
+  background: white;
+}
+
+.weekdays-container .week-day {
+  color: #808080;
+}
+
+.calendar .week {
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  background: white;
+}
+
+.calendar .week .date {
+  width: 30px;
+  height: 100%;
+  padding: 10px;
+  margin: auto;
+}
+
+.today {
+  background-color: #fd6cbb;
   color: white;
+  border-radius: 5px;
+  filter: drop-shadow(2px 2px 2px #fd6cbb);
 }
 
-.App-link {
-  color: #61dafb;
+.selected {
+  border: solid 1px grey;
+  border-radius: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  background: white;
+  border: none;
 }
